@@ -17,12 +17,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
 
-      - name: Install
-        uses: ianwalter/puppeteer-container@v4.0.0
-        with:
-          args: yarn install
+      - name: deps install
+        run: yarn install
 
       - name: Run
-        uses: ianwalter/puppeteer-container@v4.0.0
-        with:
-          args: node frontline.js
+        run: node frontline.js
