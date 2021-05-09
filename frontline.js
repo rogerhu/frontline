@@ -9,7 +9,6 @@ console.log("Running");
   page.on('console', (msg) => console.log('PAGE LOG:', msg.text()));
 
   await page.goto('https://app.healthofficeportal.com/SHM_Lafayette_School_District/Portal/Login.aspx');
-  await page.waitForNavigation();
   await page.type('#Login1_UserName', process.env['USER_LOGIN']);
   await page.type('#Login1_Password', process.env['USER_PASS']);
   await page.click('#Login1_LoginButton');
