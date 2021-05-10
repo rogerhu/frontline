@@ -1,10 +1,7 @@
 name: Frontline
 on:
-  push:
-    branches:
-      - main
   schedule:
-    - cron: '0 14 * * *'  # every day at 7am (14:00 PST)
+    - cron: '30 13 * * 1-5'  # every weekday at 6:30am (14:00 UTC)
 
 jobs:
   build:
