@@ -4,7 +4,7 @@ console.log("Running");
 
 (async () => {
   console.log("Starting");
-  const browser = await puppeteer.launch({ headless: true, slowMo: 250, args: ['--no-sandbox', '--disable-setuid-sandbox']});
+  const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox', '--window-size=1200,800']});
   const page = await browser.newPage();
   page.on('console', (msg) => console.log('PAGE LOG:', msg.text()));
 
